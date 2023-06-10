@@ -15,6 +15,7 @@ class Destination extends Model
         'computer_name',
     ];
 
+    // define quote relation
     public function quote()
     {
         return $this->hasMany(Quote::class);

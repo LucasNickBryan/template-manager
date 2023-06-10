@@ -15,6 +15,7 @@ class Quote extends Model
         'date_quoted'
     ];
 
+    // define relations
     public function site()
     {
         return $this->belongsTo(Site::class);
@@ -25,11 +26,13 @@ class Quote extends Model
         return $this->belongsTo(Destination::class);
     }
 
+    // render quote id to html format
     public function renderHtml(Quote $quote)
     {
         return '<p>' . $quote->id . '</p>';
     }
 
+    // render quote id and cast to string
     public static function renderText(Quote $quote)
     {
         return (string) $quote->id;

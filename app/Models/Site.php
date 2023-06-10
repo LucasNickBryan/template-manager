@@ -11,6 +11,7 @@ class Site extends Model
 
     protected $fillable = [ 'url' ];
 
+    // define quote relation
     public function quote()
     {
         return $this->hasMany(Quote::class);
