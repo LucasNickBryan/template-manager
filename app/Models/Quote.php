@@ -15,6 +15,16 @@ class Quote extends Model
         'date_quoted'
     ];
 
+    public function site()
+    {
+        return $this->belongsTo(Site::class);
+    }
+
+    public function destination()
+    {
+        return $this->belongsTo(Destination::class);
+    }
+
     public function renderHtml(Quote $quote)
     {
         return '<p>' . $quote->id . '</p>';

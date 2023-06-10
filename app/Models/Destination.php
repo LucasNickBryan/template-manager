@@ -14,4 +14,9 @@ class Destination extends Model
         'conjunction',
         'computer_name',
     ];
+
+    public function quote()
+    {
+        return $this->hasMany(Quote::class);
+    }
 }
